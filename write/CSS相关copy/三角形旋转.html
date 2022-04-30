@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .rotate {
+      width: 0px;
+      height: 0px;
+      border-left: 30px solid transparent;
+      border-right: 30px solid transparent;
+      border-bottom: 30px solid red;
+      /* animation: 1s ro; */
+      transition: transform 1s;
+    }
+    .rotate:hover {
+      transform: rotateZ(180deg);
+    }
+    @keyframes ro {
+      from {}
+      to {
+        transform: rotate(180deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="rotate"></div>
+</body>
+</html>

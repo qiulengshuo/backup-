@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 1. flex */
+      /* .container {
+      display: flex;
+    }
+    .left{
+      width: 200px;
+      background-color: red;
+    }
+    .right {
+      width: 200px;
+      background-color: red;
+    }
+    .center {
+      flex: 1;
+      background-color: aqua;
+    } */
+      /* 2. grid */
+      /* .container {
+      display: grid;
+      grid-template-columns: 200px 1fr 200px;
+    }
+    .left, .center, .right{
+      background-color: red;
+    } */
+      /* 3. 定位 + float  */
+      /* .container {
+      position: relative;
+      width: 100%;
+    }
+    .left {
+      width: 200px;
+      float: left;
+      background-color: red;
+    }
+    .center {
+      position: absolute;
+      left: 200px;
+      right: 200px;
+      top: 0px;
+      background-color: aqua;
+    }
+    .right {
+      float: right;
+      width: 200px;
+      background-color: red;
+    } */
+      /* 4. 定位 + margin */
+      /* .container {
+      width: 100%;
+      position: relative;
+    }
+    .left {
+      position: absolute;
+      width: 200px;
+      background-color: red;
+    }
+    .right {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 200px;
+      background-color: red;
+    }
+    .center {
+      background-color: aqua;
+      margin-left: 200px;
+      margin-right: 200px;
+    } */
+      /* 5. float + margin */
+      /* .container {
+      width: 100%;
+    }
+    .left {
+      width: 200px;
+      background-color: red;
+      float: left;
+    }
+    .right {
+      width: 200px;
+      background-color: red;
+      float: right;
+    }
+    .center {
+      margin-left: 200px;
+      margin-right: 200px;
+      background-color: aqua;
+    } */
+      /* 6. 圣杯 */
+      /* .header, .footer {
+      width: 100%;
+      background-color: red;
+    }
+    .footer {
+      clear: both;
+    }
+    .container {
+      padding: 0 200px;
+    }
+    .container div {
+      float: left;
+      position: relative;
+    }
+    .left {
+      width: 200px;
+      background-color: red;
+      margin-left: -100%;
+      left: -200px;
+    }
+    .right {
+      margin-left: -200px;
+      left: 200px;
+      width: 200px;
+      background-color: red;
+    }
+    .center {
+      width: 100%;
+      background-color: aqua;
+    } */
+      /* 7. 双飞翼 */
+      /* .header,
+      .footer {
+        width: 100%;
+        background-color: red;
+      }
+      .footer {
+        clear: both;
+      }
+      .container {
+        width: 100%;
+      }
+      .container div {
+        float: left;
+      }
+      .box {
+        margin: 0px 200px;
+      }
+      .center {
+        width: 100%;
+        background-color: aqua;
+      }
+      .left {
+        width: 200px;
+        background-color: red;
+        margin-left: -100%;
+      }
+      .right {
+        width: 200px;
+        background-color: red;
+        margin-left: -200px;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="header">header</div>
+    <div class="container">
+      <div class="center">
+        <div class="box">center</div>
+      </div>
+      <div class="left">left</div>
+      <div class="right">right</div>
+    </div>
+    <div class="footer">footer</div>
+  </body>
+</html>

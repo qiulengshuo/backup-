@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>文件下载</title>
+  </head>
+  <body>
+    <input id="file" type="file" />
+  </body>
+  <script>
+    let input = document.querySelector('#file')
+    input.addEventListener('change', function () {
+      const file = input.files[0]
+      const blob = new Blob([file], {
+        type: file.type,
+      })
+      const URL = window.URL.createObjectURL(blob)
+      const downloadElement = document.createElement('a')
+      downloadElement.href = URL
+      downloadElement.download = file.name
+      document.body.appendChild(downloadElement)
+      downloadElement.click()
+      document.body.removeChild(downloadElement)
+      window.URL.revokeObjectURL(URL)
+    })
+
+    // // 获取input
+    // const input = document.querySelector('#file')
+    // input.addEventListener('change', function () {
+    //   // 获取文件对象
+    //   const file = input.files[0]
+    //   console.log(file)
+    //   // 转换文件对象/DOMString(如果responseType不设置为blob，将是DOMString)为blob二进制对象
+    //   // 如果responseType设置为blob，可以不用转化。
+    //   const blob = new Blob([file], {
+    //     type: file.type,
+    //   })
+    //   // 通过a标签点击事件下载
+    //   const downloadElement = document.createElement('a')
+    //   // 返回参数(blob对象或file对象)对应的URL字符串 该URL生命周期与document相同
+    //   const href = window.URL.createObjectURL(blob)
+    //   downloadElement.href = href
+    //   // 必须设置download属性，不然浏览器会去直接浏览他能识别的文件
+    //   downloadElement.download = file.name
+    //   document.body.appendChild(downloadElement)
+    //   downloadElement.click()
+    //   document.body.removeChild(downloadElement)
+    //   // 手动释放内存，避免泄露
+    //   window.URL.revokeObjectURL(href)
+    // })
+  </script>
+</html>

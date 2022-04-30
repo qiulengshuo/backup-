@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>水平垂直居中</title>
+  <style>
+    /* 1. flex */
+    /* .container {
+      width: 200px;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: gold;
+    }
+    .block {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+    } */
+
+    /* 2. 定位 top left transform 子盒子宽高未知 */
+    /* .container {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      background-color: gold;
+    }
+    .block {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-color: red;
+    } */
+
+    /* 3. 定位 + margin */
+    /* .container {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      background-color: red;
+    }
+    .block {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-color: aqua;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    } */
+
+    /* 4. 定位 + margin  子盒子宽高已知*/
+    /* .container {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      background-color: red;
+    }
+    .block {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      top: 50%;
+      left: 50%;
+      margin-left: -50px;
+      margin-top: -50px;
+      background-color: green;
+    } */
+
+    /* 5. line-height text-align */
+    /* .container {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      line-height: 200px;
+      text-align: center;
+    } */
+  </style>
+</head>
+<body>
+  <!-- <div class="container">
+    <div class="block">块级</div>
+  </div> -->
+
+  <!-- <div class="container">
+    行内
+  </div> -->
+</body>
+</html>

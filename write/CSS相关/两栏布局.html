@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>左边一栏宽度固定，右边自适应</title>
+  <style>
+
+    /* 1. 左: float left  2. 右：margin-left */
+    .outer {
+      height: 500px;
+    }
+    .left {
+      width: 200px;
+      float: left;
+      background-color: red;
+    }
+    .right {
+      margin-left: 200px;
+      background-color: green;
+    }
+
+    /* 2. 左: float left  2. 右：overflow: hidden */
+    /* .outer {
+      height: 500px;
+    }
+    .left {
+      width: 200px;
+      float: left;
+      background-color: red;
+    }
+    .right {
+      overflow: hidden;
+      background-color: green;
+    } */
+
+    /* 3. 父元素 flex布局 左元素固定宽度 右元素 flex:1 */
+    /*.outer {
+      height: 100%;
+      display: flex;
+    }
+    .left {
+      width: 200px;
+      background-color: red;
+    }
+    .right {  
+      flex: 1;
+      background-color: blue;
+    } */
+
+    /* 4. 父元素 相对定位 左元素 绝对定位  右元素 margin-left */
+    /* .outer {
+      height: 200px;
+      position: relative;
+    }
+    .left {
+      width: 200px;
+      position: absolute;
+      background-color: red;
+    }
+    .right {
+      margin-left: 200px;
+      background-color: blue;
+    } */
+
+    /* 5.  父元素 相对定位 左元素 固定宽度 右元素 绝对定位 left 200*/
+    /* .outer {
+      height: 200px;
+      position: relative;
+    }
+    .left {
+      width: 200px;
+      background-color: red;
+    }
+    .right {
+      position: absolute;
+      left: 200px;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background-color: blue;
+    } */
+  </style>
+</head>
+<body>
+  <div class="outer">
+    <div class="left">left</div>
+    <div class="right">right</div>
+  </div>
+</body>
+</html>

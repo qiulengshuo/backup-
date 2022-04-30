@@ -1,0 +1,20 @@
+<body>
+  <button onclick="AddJob()">添加工作经历</button>
+  <button onclick="GetJobs()">获取全部工作</button>
+
+  <div id="joblist">
+      <div id="job1" class="job">
+          <input name="CompanyName" type="text" value="公司1" />
+          <button onclick="DelJob(1)">删除</button>
+      </div>
+  </div>
+  <script type="text/javascript">
+      document.getElementById('joblist').addEventListener('click', function (ev) {
+        var target = ev.target || ev.srcElement;
+        if (target.nodeName.toLowerCase() == 'button') {
+            var e = document.getElementById(target.parentNode.id);
+            document.getElementById("joblist").removeChild(e);
+        }
+    });
+  </script>
+</body>
